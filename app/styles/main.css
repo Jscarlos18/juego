@@ -12,13 +12,29 @@
 }
 #arriba-derecha{
 	background-color: red;
+	border-radius: 16px 200px 16px 16px;
+	-moz-border-radius: 16px 200px 16px 16px;
+	-webkit-border-radius: 16px 200px 16px 16px;
+	border: 0px solid #000000;
 }
 #arriba-izquierda{
-	background-color: blue;
+	background-color: green;
+	border-radius: 200px 16px 16px 16px;
+	-moz-border-radius: 200px 16px 16px 16px;
+	-webkit-border-radius: 200px 16px 16px 16px;
+	border: 0px solid #000000;
 }
 #abajo-derecha{
-	background-color: green;
+	background-color: blue;
+	border-radius: 16px 16px 200px 16px;
+	-moz-border-radius: 16px 16px 200px 16px;
+	-webkit-border-radius: 16px 16px 200px 16px;
+	border: 0px solid #000000;
 }
 #abajo-izquierda{
 	background-color: yellow;
+	border-radius: 16px 16px 16px 200px;
+	-moz-border-radius: 16px 16px 16px 200px;
+	-webkit-border-radius: 16px 16px 16px 200px;
+	border: 0px solid #000000;
 }
