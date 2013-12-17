@@ -21,7 +21,7 @@ define([], function () {
     		var thisId = $(this).attr('id')
     		console.log(thisId)
     		if(thisId ==='arriba-derecha') {
-    			myArray.push(thisId);
+    			myArray.push(thisId)
     			highlight($(this) , "darkred")
     			randomize;
     			var colorsRandom = colors[randomize];
