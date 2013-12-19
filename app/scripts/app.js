@@ -56,7 +56,7 @@ define([], function () {
         initialize()
 
 $('#start-button').click(function() {
-             $(this).css('color', '#fff').fadeOut()
+             $(this).css('color', '#f90').fadeOut()
              setTimeout( function() {
                  generateComputerSequence()
                  showComputerSequence()
@@ -67,7 +67,7 @@ $('#start-button').click(function() {
         $('.boton').click( function() {
             if(userPlaying) {
                 var thisId = $(this).attr('id')
-                highlight($(this), "#AA66FF")
+                highlight($(this), "#000")
                 userClicks.push(thisId)
 
                 if (userClicks.length >= computerSequence.length) {//nº de clicks del jugador comparado con el nº de clicks de la computadora
