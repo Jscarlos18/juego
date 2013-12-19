@@ -34,7 +34,7 @@ define([], function () {
         for(var id in seq) {
            (function(id){
              setTimeout( function() {
-               highlight($("#"+seq[id]), "#AA66FF")//genera siguiente secuencia añadiendo uno mas a la secuencia anterior
+               highlight($("#"+seq[id]), "#fff")//genera siguiente secuencia añadiendo uno mas a la secuencia anterior
              }, 600*id)
            })(id)
         }
@@ -49,19 +49,25 @@ define([], function () {
     }
 
     var endGame = function() {
-        // TODO
+       
     }
     
     $(document).ready(function() {
         initialize()
 
-        generateComputerSequence()
-        showComputerSequence()
+$('#start-button').click(function() {
+             $(this).css('color', '#fff').fadeOut()
+             setTimeout( function() {
+                 generateComputerSequence()
+                 showComputerSequence()
+             }, 500)
+         })
+ 
 
         $('.boton').click( function() {
             if(userPlaying) {
                 var thisId = $(this).attr('id')
-                highlight($(this), "#fff")
+                highlight($(this), "#AA66FF")
                 userClicks.push(thisId)
 
                 if (userClicks.length >= computerSequence.length) {//nº de clicks del jugador comparado con el nº de clicks de la computadora
