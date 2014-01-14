@@ -43,7 +43,7 @@
 	border: 0px solid #000000;
 }
 
-#start-button {
+#start-boton {
      position: absolute;
      width: 100%;
      top: 50%;
@@ -54,6 +54,6 @@
      cursor: pointer; cursor: hand;
  }
 
- #start-button:hover {
+ #start-boton:hover {
     color: #fff;
  }
