@@ -1,38 +1,36 @@
 /*global define */
 define([], function () {
     'use strict'
-    
+    //variables globales
     var userPlaying = false
     var userClicks = new Array()
-    var botonList
+    var buttonList
     var computerSequence = new Array()
-
-    var initialize = function() {
-        botonList = jQuery.map( $(".boton"),
+    var initialize = function() { 
+        buttonList = jQuery.map( $(".boton"),
                        function(element) {
                          return $(element).attr('id')
                        })
     }
-
     var generateComputerSequence = function() {
-        computerSequence.push( botonList[
+        computerSequence.push( buttonList[
                                  Math.floor(Math.random()
-                                   * botonList.length)] )
+                                   * buttonList.length)] )
         console.log(computerSequence)
     }
-
-    var highlight = function(boton, color) {
-      var oldColor = boton.css("background-color")
-      boton.css("background-color", color).dequeue()
+    //cambiar el color del css y volver al color original cuando finaliza
+    var highlight = function(button, color) {
+      var oldColor = button.css("background-color")
+      button.css("background-color", color).dequeue()
             .delay(300)
             .queue( function() {
-                    boton.css("background-color", oldColor).dequeue()
+                    button.css("background-color", oldColor).dequeue()
                   })
     }
-
+    // mostramos la secuecia generada aleatoria
     var showComputerSequence = function() {
         var seq = computerSequence
-        for(var id in seq) {
+        for(var id in seq) {//se espera 600 ms en mostrar cada elemento
            (function(id){
              setTimeout( function() {
                highlight($("#"+seq[id]), "#fff")
@@ -43,30 +41,47 @@ define([], function () {
             userPlaying = true
         }, 600*seq.length)
     }
-
+    //comparamos las secuencias de computer y user
     var compareSequences = function() {
-        for(var i in userClicks) {
-            if(computerSequence[i] !== userClicks[i]) return false
-        }
-        return true
-    }
+        // TODO
+        for(var i = 0; i < userClicks.length; ++i)
+                 {
+                         if(userClicks[i] != computerSequence[i])
+                         {
+                                 return false;
+                         }
+                 }
 
+                 console.log("Correcto!");
+                 $('#score').text(userClicks.length)
+                 return true;
+    }
+    //finalizacion del juego, e inicializamos los css originales
     var endGame = function() {
-        var response = confirm("Error. Restart?")
-        if (response) {
-            userClicks.length = 0
-            computerSequence.length = 0
-            setTimeout( function() {
-                generateComputerSequence()
-                showComputerSequence()
-            }, 2000)
-        }
+        for(var i = 0; i < buttonList.length; i++)
+                 {
+                      $("#"+buttonList[i]).css("opacity", 0.3)
+                 }
+        $('#fail').html("Fin de la Partida")
+        $('#fail').fadeIn(2000)
+        $('#fail').fadeOut(2000)
+        $('#score').text("Score "+(userClicks.length-1))
+        userClicks.length=0;
+        computerSequence.length=0;
+        $('#start').css('background-color', '#000').fadeIn()
+
+
     }
     
     $(document).ready(function() {
         initialize()
 
-        $('#start-boton').click(function() {
+        $('#start').click(function() {//quitamos la opacidad a los botones
+          for(var i = 0; i < buttonList.length; i++)
+                 {
+                      $("#"+buttonList[i]).css("opacity", 1)
+                 }
+            $('#score').text("0");
             $(this).css('color', '#fff').fadeOut()
             setTimeout( function() {
                 generateComputerSequence()
@@ -74,27 +89,31 @@ define([], function () {
             }, 500)
         })
 
-        $('.boton').click( function() {
-            if(userPlaying) {
+        $('.boton').click( function() { //asociamos la siguiente funcion al boton para que ejecute cada vez que hagamos click
+            if(userPlaying) {//solo se ejecuta si ya hemos visualizado la secuencia
                 var thisId = $(this).attr('id')
                 highlight($(this), "#fff")
                 userClicks.push(thisId)
 
-                if (!compareSequences()) {
-                    userPlaying = false
-                    endGame()
-                }
                 if (userClicks.length >= computerSequence.length) {
                     userPlaying = false
-                    userClicks.length = 0
-                    setTimeout(function() {
-                        generateComputerSequence()
-                        showComputerSequence()
-                    }, 1000)
+                      if (compareSequences()){
+                          userClicks.length = 0
+                          setTimeout(function() {
+                          generateComputerSequence()
+                          showComputerSequence()
+                      }, 1000)
+
+                    }
+                  else
+                  {
+                    endGame()
+                  }      
                 }
             }
         })
     })
-return computerSequence
     return "<============== OK";
+
+    return '\'Allo \'Allo!';
 });

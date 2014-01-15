@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SimonSays</title>
+        <title>simon says</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -23,13 +23,25 @@
         <![endif]-->
 
 
-       <div id="MainContainer">
-        	<div id="arriba-derecha" class="boton"></div>
-        	<div id="arriba-izquierda" class="boton"></div>
-        	<div id="abajo-derecha" class="boton"></div>
-        	<div id="abajo-izquierda" class="boton"></div>
-        	<div id="start-boton">START</div>
+        <div class="container">
+            <div id="title">
+                <h1>Simon Says</h1>
+            </div>
+            <div id="tablegame">
+                <div class="triangle" id="start">Start</div>
+                <div class="triangle" id="score">Puntuacion</div>
+                <div id="fail"></div>
+                <div class="boton" id="rojo"></div>
+                <div class="boton" id="verde"></div>
+                <div class="boton" id="azul"></div>
+                <div class="boton" id="amarillo"></div>
+            </div> 
+             <div class="footer"> 
+            <p>Por Sergio Moliné, Fernando Rodriguez y José Carlos Quian</p>
+            <p>Año :2014</p>
         </div>
+        </div>
+       
 
 
         <!-- build:js scripts/vendor.js -->

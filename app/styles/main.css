@@ -1,59 +1,118 @@
-#MainContainer{
-	position:absolute;
-	background-color:grey;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-}
-.boton{
-	float:left;
-	width: 47%;
-	height: 47%;
-	margin-right:1%;
-	margin-left:1%;
-	margin-bottom:1%;
-	margin-top:1%;
-}
-#arriba-derecha{
-	background-color: red;
-	border-radius: 200px 16px 16px 16px;
-	-moz-border-radius: 200px 16px 16px 16px;
-	-webkit-border-radius: 200px 16px 16px 16px;
-	border: 0px solid #000000;
-}
-#arriba-izquierda{
-	background-color: green;		
-	border-radius: 16px 200px 16px 16px;
-	-moz-border-radius: 16px 200px 16px 16px;
-	-webkit-border-radius: 16px 200px 16px 16px;
-	border: 0px solid #000000;
-}
-#abajo-derecha{
-	background-color: blue;
-	border-radius: 16px 16px 16px 200px;
-	-moz-border-radius: 16px 16px 16px 200px;
-	-webkit-border-radius: 16px 16px 16px 200px;
-	border: 0px solid #000000;
-}
-#abajo-izquierda{
-	background-color: yellow;
-	border-radius: 16px 16px 200px 16px;
-	-moz-border-radius: 16px 16px 200px 16px;
-	-webkit-border-radius: 16px 16px 200px 16px;
-	border: 0px solid #000000;
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #cacccc;
+    noise-color:#0a090a;
 }
 
-#start-boton {
-     position: absolute;
-     width: 100%;
-     top: 50%;
-     margin-top: -50px;
-     text-align: center;
-     color: #000;
-     font-size: 120px;
-     cursor: pointer; cursor: hand;
- }
+h1{
+	font-family:"Bitstream Cyberbit";
+	font-size:80px;
+	margin-left:130px;
+	color:#585858;
+	
+}
 
- #start-boton:hover {
-    color: #fff;
- }
+.container {
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+}
+
+#title {
+    margin: 20px auto 0 auto;
+    width: 700px;
+}
+
+#tablegame {
+    margin: 20px auto 0 auto;
+    width: 750px;
+    height: 750px;
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 30px;
+    border-radius: 6px;
+    padding: 50px;
+    position: relative;
+}
+
+.boton {
+    float:left;
+    width: 300px;
+    height: 300px;
+    opacity: 0.3;
+
+}
+#rojo {
+    float: top;
+    display: inline-block;
+    background-color: red;
+    margin: 15px;
+     border-radius: 0px 100px 0px 100px;
+	-moz-border-radius: 0px 100px 0px 100px;
+	-webkit-border-radius: 0px 100px 0px 100px;
+	border: 5px inset #b00e64;
+}
+
+#verde {
+    float: top;
+    background-color: green;
+    display: inline-block;
+    margin: 15px;
+   border-radius: 100px 0px 100px 0px;
+-moz-border-radius: 100px 0px 100px 0px;
+-webkit-border-radius: 100px 0px 100px 0px;
+	border: 5px inset #0eb062;
+}
+#amarillo{
+    float: bottom;
+    display: inline-block;
+    background-color: yellow;
+    margin: 15px;
+     border-radius: 0px 100px 0px 100px;
+	-moz-border-radius: 0px 100px 0px 100px;
+	-webkit-border-radius: 0px 100px 0px 100px;
+	border: 5px inset #b0b00e;
+}
+#azul{
+    float: bottom;
+    display: inline-block;
+    background-color: blue;
+    margin: 15px;
+   	border-radius: 100px 0px 100px 0px;
+	-moz-border-radius: 100px 0px 100px 0px;
+	-webkit-border-radius: 100px 0px 100px 0px;
+	border: 5px inset #0e8ab0;
+}
+
+#score{
+    right: 55px;
+}
+
+#start:hover {
+   background-color: #fff;
+   color: black;
+}
+
+#fail{
+    z-index: 10;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 322px;
+    font-family: verdana;
+    color: black;
+    font-size: 100px;
+    display: none;
+
+}
+
+
+.footer {
+    clear: both;
+    margin: 0 auto 10px auto;
+    float: right;
+    width: 400px;
+}
