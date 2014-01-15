@@ -51,9 +51,9 @@ height: 100%;
     display: inline-block;
     background-color: red;
     margin: 15px;
-     border-radius: 0px 100px 0px 100px;
-	-moz-border-radius: 0px 100px 0px 100px;
-	-webkit-border-radius: 0px 100px 0px 100px;
+     border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
 	border: 5px inset #b00e64;
 }
 
@@ -62,9 +62,9 @@ height: 100%;
     background-color: green;
     display: inline-block;
     margin: 15px;
-   border-radius: 100px 0px 100px 0px;
--moz-border-radius: 100px 0px 100px 0px;
--webkit-border-radius: 100px 0px 100px 0px;
+   border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
 	border: 5px inset #0eb062;
 }
 #amarillo{
@@ -72,9 +72,9 @@ height: 100%;
     display: inline-block;
     background-color: yellow;
     margin: 15px;
-     border-radius: 0px 100px 0px 100px;
-	-moz-border-radius: 0px 100px 0px 100px;
-	-webkit-border-radius: 0px 100px 0px 100px;
+     border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
 	border: 5px inset #b0b00e;
 }
 #azul{
@@ -82,9 +82,9 @@ height: 100%;
     display: inline-block;
     background-color: blue;
     margin: 15px;
-   	border-radius: 100px 0px 100px 0px;
-	-moz-border-radius: 100px 0px 100px 0px;
-	-webkit-border-radius: 100px 0px 100px 0px;
+   	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
 	border: 5px inset #0e8ab0;
 }
 
