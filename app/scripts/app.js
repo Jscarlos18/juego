@@ -51,9 +51,9 @@ define([], function () {
                                  return false;
                          }
                  }
-
+        //	 puntuacion
                  console.log("Correcto!");
-                 $('#score').text(userClicks.length)
+                 $('#score').text("Puntuación "+(userClicks.length))
                  return true;
     }
     //finalizacion del juego, e inicializamos los css originales
@@ -65,7 +65,7 @@ define([], function () {
         $('#fail').html("Fin de la Partida")
         $('#fail').fadeIn(2000)
         $('#fail').fadeOut(2000)
-        $('#score').text("Score "+(userClicks.length-1))
+        $('#score').text("Puntuación "+(userClicks.length-1))
         userClicks.length=0;
         computerSequence.length=0;
         $('#start').css('background-color', '#000').fadeIn()
@@ -92,7 +92,7 @@ define([], function () {
         $('.boton').click( function() { //asociamos la siguiente funcion al boton para que ejecute cada vez que hagamos click
             if(userPlaying) {//solo se ejecuta si ya hemos visualizado la secuencia
                 var thisId = $(this).attr('id')
-                highlight($(this), "#fff")
+                highlight($(this), "#000")
                 userClicks.push(thisId)
 
                 if (userClicks.length >= computerSequence.length) {
@@ -107,13 +107,10 @@ define([], function () {
                     }
                   else
                   {
-                    endGame()
+                    endGame()//fin del juego al fallar la comparacion porque son distintas
                   }      
                 }
             }
         })
     })
-    return "<============== OK";
-
-    return '\'Allo \'Allo!';
 });
