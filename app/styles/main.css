@@ -67,6 +67,7 @@ h1{
 	-webkit-border-radius: 200px 200px 200px 200px;
 	border: 5px inset #0eb062;
 }
+
 #amarillo{
     float: bottom;
     display: inline-block;
@@ -77,6 +78,7 @@ h1{
 	-webkit-border-radius: 200px 200px 200px 200px;
 	border: 5px inset #b0b00e;
 }
+
 #azul{
     float: bottom;
     display: inline-block;
@@ -106,9 +108,7 @@ h1{
     color: black;
     font-size: 100px;
     display: none;
-
 }
-
 
 .footer {
     clear: both;
